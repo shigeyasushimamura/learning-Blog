@@ -1,0 +1,41 @@
+:root {
+  --color-primary: #595757;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  background-color: rgb(201, 117, 117);
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-primary);
+}
+.header__heading {
+  font-size: 1.25rem;
+  padding-left: 1.75rem;
+}
+
+.header__nav {
+  display: flex;
+  background-color: rgb(172, 162, 64);
+  color: green;
+  justify-content: space-between; /* 左右の要素を両端に配置 */
+  align-items: center; /* 縦方向の中央揃え */
+}
+
+.header__field {
+  display: flex;
+  list-style: none;
+  margin-right: 1.5rem;
+}
+
+.header__btn-signup {
+  padding: 0.75rem 2rem;
+  border-radius: 1.75rem;
+}
+.header__btn-login {
+  padding: 0.75rem 2rem;
+  border-radius: 1.75rem;
+  margin-left: 1rem;
+}
