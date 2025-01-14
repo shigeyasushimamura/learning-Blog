@@ -5,37 +5,81 @@
 
 .header {
   display: flex;
-  background-color: rgb(201, 117, 117);
+  background-color: white;
   height: 4rem;
   justify-content: space-between;
   align-items: center;
   color: var(--color-primary);
 }
 .header__heading {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   padding-left: 1.75rem;
+  font-weight: 700;
 }
 
 .header__nav {
   display: flex;
-  background-color: rgb(172, 162, 64);
-  color: green;
+  background-color: white;
+
   justify-content: space-between; /* 左右の要素を両端に配置 */
   align-items: center; /* 縦方向の中央揃え */
+}
+
+.header__nav-item {
+  font-weight: 700;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.header__nav-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #6ec5c8 75%, transparent 76%);
+}
+
+.header__nav-item:hover {
+  color: #007aff;
 }
 
 .header__field {
   display: flex;
   list-style: none;
-  margin-right: 1.5rem;
+  gap: 2.375rem;
+  align-items: center;
+  margin-right: 2rem;
 }
 
 .header__btn-signup {
-  padding: 0.75rem 2rem;
+  padding: 0.25rem 0.625rem;
+  min-width: 11.125rem;
+  min-height: 2.1875rem;
   border-radius: 1.75rem;
+  background-color: #7cc9be;
+  color: white;
+  border: none;
+  font-weight: bold;
 }
+.header__btn-signup:hover {
+  color: var(--color-primary);
+}
+
 .header__btn-login {
-  padding: 0.75rem 2rem;
+  min-width: 9.1875rem;
+  min-height: 2.1875rem;
+  padding: 0.25rem 0.625rem;
   border-radius: 1.75rem;
-  margin-left: 1rem;
+
+  background-color: #fbeb00;
+  border: none;
+  font-weight: bold;
+}
+
+.header__btn-login:hover {
+  color: white;
 }

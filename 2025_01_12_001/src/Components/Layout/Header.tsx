@@ -11,12 +11,15 @@ const Header = () => {
           <li className={styles["header__nav-item"]}>受講生の声</li>
           <li className={styles["header__nav-item"]}>よくある質問</li>
           <li className={styles["header__nav-item"]}>メッセージ</li>
+          <li>
+            <button className={styles["header__btn-signup"]}>
+              新規会員登録
+            </button>
+          </li>
+          <li>
+            <button className={styles["header__btn-login"]}>ログイン</button>
+          </li>
         </ul>
-
-        <div className={styles["header__field"]}>
-          <button className={styles["header__btn-signup"]}>新規会員登録</button>
-          <button className={styles["header__btn-login"]}>ログイン</button>
-        </div>
       </nav>
     </div>
   );
