@@ -1,5 +1,51 @@
 .blog {
   background-color: #f8f3ef;
+  color: black;
+  padding: 0 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  min-height: 100rem;
+.campaign {
+  text-align: center;
+  padding: 0 3rem;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.campaign__img-container {
+  position: relative;
+}
+
+.campaign__img {
+  width: 100%;
+  height: 100%;
+}
+
+.campaign__community-open {
+  position: absolute;
+  width: 21.5625rem;
+  aspect-ratio: 345/160;
+  right: 0;
+  bottom: 0;
+  transform: translate(10%, 20%);
+}
+
+.campaign__btn-container {
+  margin-top: 5rem;
+}
+
+.campaign__btn {
+  width: 47.9167vh;
+  padding: 1.875rem;
+  font-weight: bold;
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.15rem;
+  color: white;
+  border: none;
+  background-color: #7cc9be;
+  border-radius: 3rem;
+  cursor: pointer;
 }
