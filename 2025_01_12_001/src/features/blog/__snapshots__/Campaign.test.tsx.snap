@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Campaign > renders main campaign image with correct attributes 1`] = `
+<DocumentFragment>
+  <div
+    class="campaign"
+  >
+    <img
+      alt="キャンペーンメインビジュアル"
+      class="campaign__img"
+      src="fv_pc.webp"
+    />
+    <div>
+      <a
+        aria-label="コミュニティを開く"
+        href="/"
+      >
+        <img
+          alt="コミュニティ参加案内"
+          class="campaign__img"
+          src="community_pc.webp"
+        />
+      </a>
+    </div>
+    <div>
+      <button
+        aria-label="体験授業の申し込み"
+        class="campaign__btn"
+      >
+        無料で体験授業を受ける
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
