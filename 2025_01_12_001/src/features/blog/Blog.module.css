@@ -1,21 +1,24 @@
 .blog {
   background-color: #f8f3ef;
   color: black;
-  padding: 0 1rem;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 5rem;
 }
 
 .campaign {
   text-align: center;
+  padding: 0 1rem;
   padding: 0 3rem;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .campaign__img-container {
   position: relative;
+  width: 100%;
 }
 
 .campaign__img {
@@ -23,22 +26,36 @@
   height: 100%;
 }
 
+.campaign__img-community {
+  width: 100%;
+  height: 100%;
+}
+
+.campaign__img-accent {
+  width: 50%;
+}
+
 .campaign__community-open {
   position: absolute;
-  width: 21.5625rem;
+  /* width: 21.5625rem; */
+  width: 30%;
   aspect-ratio: 345/160;
   right: 0;
   bottom: 0;
   transform: translate(10%, 20%);
 }
 
-.campaign__btn-container {
+.campaign__container {
   margin-top: 5rem;
 }
 
+.img__transparent:hover {
+  opacity: 0.7;
+}
+
 .campaign__btn {
-  width: 72.9167vh;
-  padding: 1.875rem;
+  width: 46.9167vh;
+  padding: 2.125rem 1.875rem;
   font-weight: bold;
   font-size: 1.75rem;
   line-height: 1.75rem;
@@ -48,4 +65,164 @@
   background-color: #7cc9be;
   border-radius: 3rem;
   cursor: pointer;
+}
+
+.campaign__btn:hover {
+  opacity: 0.7;
+}
+
+.introduction {
+  text-align: center;
+  margin: 10rem auto;
+}
+
+.introduction__heading {
+  font-size: 3.75rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.2rem;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  background: linear-gradient(transparent 70%, rgba(115, 199, 200, 0.652) 30%);
+  display: inline-block;
+  padding: 0 1.25rem;
+}
+
+.introduction__heading-sub {
+  margin-top: 1.125rem;
+  font-weight: bold;
+  font-size: 1.5625rem;
+  letter-spacing: 0.2rem;
+  color: rgb(115, 198, 200);
+}
+
+.introduction__container {
+  display: flex;
+  margin: 2.8125rem auto 0px;
+  width: 80%;
+  gap: 3.625rem;
+  align-items: center;
+}
+
+.introduction__img-main {
+  width: 50%;
+  height: auto;
+}
+
+.introduction__msg {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 180%;
+  letter-spacing: 0.1rem;
+  margin-top: 1.875rem;
+  width: 25.125rem;
+  text-align: left;
+}
+
+.jp-text {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.edge__root {
+  position: relative;
+}
+
+.edge {
+  width: 4.0625rem;
+  position: absolute;
+  z-index: 2;
+  vertical-align: middle;
+  inset: 0px 0px 0px auto;
+}
+
+.edge__reverse {
+  width: 4.0625rem;
+  position: absolute;
+  z-index: 2;
+  vertical-align: middle;
+  inset: 0px auto 0px 0px;
+
+  transform: scaleX(-1);
+}
+
+.bloglist {
+  padding: 5rem;
+  background-image: linear-gradient(
+    180deg,
+    rgba(252, 209, 205, 0.2) 0%,
+    rgba(252, 209, 205, 1) 20%,
+    /* rgba(252, 209, 205, 1) 100%,
+    rgba(252, 209, 205, 0) 100% */
+  );
+}
+
+.bloglist__heading {
+  font-size: 3.75rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.2rem;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  background: linear-gradient(transparent 70%, #ffec99 30%);
+  display: inline-block;
+  padding: 0 1.25rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: -4rem 0 4rem;
+}
+
+.bloglist__heading-sub {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.2rem;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  background: linear-gradient(transparent 60%, #ffec99 40%);
+  display: inline-block;
+  padding: 0 0.75rem;
+}
+
+.blogitem {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.blogitem__img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.3755rem;
+}
+
+.blogitem__img:hover {
+  opacity: 0.9;
+}
+
+.blogitem__frame {
+  background-color: #fff;
+  border: 8px solid #f9ece5; /* 外側のフレーム */
+  border-radius: 1rem; /* 角丸 */
+  padding: 16px; /* 内側の余白 */
+  box-shadow: 0 1px 3px rgba(224, 189, 127, 0.1);
+  /* text-align: center; */
+}
+
+.blogitem__heading {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.875rem;
+  letter-spacing: 0.2rem;
+  margin: 1rem 0 0 1.25rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.blogitem__date {
+  /* font-family: "Noto Sans JP", sans-serif; */
+  font-size: 1.275rem;
+
+  margin: 0.75rem 0 0 1.25rem;
+  color: rgba(0, 0, 0, 0.7);
 }
