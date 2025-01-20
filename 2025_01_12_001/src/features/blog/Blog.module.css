@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .campaign {
@@ -171,7 +173,7 @@
 .container {
   display: flex;
   justify-content: center;
-  margin: -4rem 0 4rem;
+  /* margin: -4rem 0 4rem; */
 }
 
 .bloglist__heading-sub {
@@ -225,4 +227,19 @@
 
   margin: 0.75rem 0 0 1.25rem;
   color: rgba(0, 0, 0, 0.7);
+}
+
+.blogitem__video {
+  margin: 0 auto;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: calc(var(--width) * 0.5625);
+  border-radius: 0.3755rem;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .blogitem__video {
+    height: calc(var(--width) * 0.7225);
+  }
 }
