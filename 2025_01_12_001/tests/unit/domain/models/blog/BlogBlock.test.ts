@@ -3,21 +3,21 @@ import { BlogBlock } from "../../../../../src/features/Blog/domain/models/blog/B
 
 describe("BlockBlock", () => {
   it("create heading", () => {
-    const block = new BlogBlock("heading", "", { level: 1 });
+    const block = new BlogBlock("1", "heading", "", { level: 1 });
     expect(block.getType()).toEqual("heading");
   });
   it("create paragraph", () => {
-    const block = new BlogBlock("paragraph", "text", null);
+    const block = new BlogBlock("1", "paragraph", "text", null);
   });
 
   it("create image", () => {
-    const block = new BlogBlock("image", "", {
+    const block = new BlogBlock("1", "image", "", {
       imageUrl: "sample.png",
       alt: "sample",
     });
   });
 
   it("should throw error for empty type", () => {
-    expect(() => new BlogBlock(null as any, null as any, null)).toThrow();
+    expect(() => new BlogBlock("1", null as any, null as any, null)).toThrow();
   });
 });

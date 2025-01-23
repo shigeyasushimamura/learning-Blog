@@ -7,7 +7,22 @@ export class BlogPost {
     private id?: string,
     private createdAt?: Date,
     private updatedAt?: Date
-  ) {}
+  ) {
+    this.validateTitle(title);
+    this.validateBlocs(blocks);
+  }
+
+  private validateTitle(title: string) {
+    if (!title || title.trim().length === 0) {
+      throw new Error("title cannnot be empty");
+    }
+  }
+
+  private validateBlocs(blocks: BlogBlock[]) {
+    if (!Array.isArray(blocks)) {
+      throw new Error("blocs should be array");
+    }
+  }
 
   getTitle(): string {
     return this.title;

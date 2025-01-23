@@ -7,6 +7,7 @@ type Metadata = {
 
 export class BlogBlock {
   constructor(
+    private id: string,
     private type: BlockType,
     private content: string,
     private metadata: Metadata
@@ -44,6 +45,10 @@ export class BlogBlock {
       default:
         break;
     }
+  }
+
+  getId(): string {
+    return this.id;
   }
 
   getType(): BlockType {

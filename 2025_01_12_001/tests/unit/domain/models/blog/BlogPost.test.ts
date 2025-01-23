@@ -8,7 +8,7 @@ describe("BlogPost", () => {
   beforeEach(() => {});
 
   it("addBlock", () => {
-    let blocks = [new BlogBlock("heading", "", { level: 1 })];
+    let blocks = [new BlogBlock("1", "heading", "", { level: 1 })];
     const currentTime = new Date();
     blogPost = new BlogPost("title", blocks, "1", currentTime, currentTime);
     expect(blogPost.getId()).toEqual("1");
