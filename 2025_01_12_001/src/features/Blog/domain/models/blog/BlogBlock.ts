@@ -12,26 +12,65 @@ export class BlogBlock {
     private metadata: Metadata
   ) {
     this.validateType(type);
-    this.validateContent(content);
     this.validateMetadata(type, metadata);
   }
 
-  private validateType(type:BlockType):void {
-    if(!type){
-        throw new Error("BlogBlock type cannnot be empty")
+  private validateType(type: BlockType): void {
+    if (!type) {
+      throw new Error("BlogBlock type cannnot be empty");
     }
   }
-  private validateContent(content:string):void {
-    if(!content || content.trim().length === 0){
-        throw new Error("BlogBlock content cannot be empty")
+  private validateContent(content: string): void {
+    if (!content || content.trim().length === 0) {
+      throw new Error("BlogBlock content cannot be empty");
     }
   }
 
-  private validateMetadata(type:BlockType,metadata:Metadata):void {
-    switch(type){
-        case "heading":
-            if(!metadata?.level || !metadata)
-
+  private validateMetadata(type: BlockType, metadata: Metadata): void {
+    switch (type) {
+      case "heading":
+        if (!metadata?.level) {
+          throw new Error("BlogBlock heading require level");
+        }
+        break;
+      case "image":
+        if (!metadata?.imageUrl || !metadata?.alt) {
+          throw new Error("BlogBlock heading require imageUrl and alt");
+        }
+        break;
+      case "paragraph":
+        this.validateContent(this.content);
+        break;
+      default:
+        break;
     }
+  }
+
+  getType(): BlockType {
+    return this.type;
+  }
+
+  getContent(): string {
+    return this.content;
+  }
+
+  getMetadata(): Metadata {
+    return this.metadata;
+  }
+
+  updateParagraph(newContent: string): void {
+    this.validateContent(newContent);
+    this.content = newContent;
+  }
+  updateHeading(newTitle: string, newLevel: number) {
+    this.validateContent(newTitle);
+    const type = "heading";
+    this.validateMetadata(type, { level: newLevel });
+    this.metadata = { ...this.metadata, level: newLevel };
+  }
+  updateImage(newImageUrl: string, newAlt: string): void {
+    const type = "image";
+    this.validateMetadata(type, { imageUrl: newImageUrl, alt: newAlt });
+    this.metadata = { ...this.metadata, imageUrl: newImageUrl, alt: newAlt };
   }
 }
