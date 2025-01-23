@@ -17,7 +17,6 @@ exports[`Campaign > renders main campaign image with correct attributes 1`] = `
       >
         <img
           alt="コミュニティ参加案内"
-          class="campaign__img"
           src="community_pc.webp"
         />
       </a>
@@ -29,6 +28,21 @@ exports[`Campaign > renders main campaign image with correct attributes 1`] = `
       >
         無料で体験授業を受ける
       </button>
+    </div>
+    <div>
+      <a>
+        <img
+          alt="バナー"
+          class="campaign__img undefined"
+          src="banner.webp"
+        />
+      </a>
+    </div>
+    <div>
+      <img
+        alt="アクセント"
+        src="accent.webp"
+      />
     </div>
   </div>
 </DocumentFragment>
