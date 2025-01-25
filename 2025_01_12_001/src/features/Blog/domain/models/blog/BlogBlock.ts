@@ -14,6 +14,7 @@ export class BlogBlock {
   ) {
     this.validateType(type);
     this.validateMetadata(type, metadata);
+    this.validateContent(type, content);
   }
 
   private validateType(type: BlockType): void {
@@ -21,8 +22,8 @@ export class BlogBlock {
       throw new Error("BlogBlock type cannnot be empty");
     }
   }
-  private validateContent(content: string): void {
-    if (!content || content.trim().length === 0) {
+  private validateContent(type: BlockType, content: string): void {
+    if (type == "paragraph" && (!content || content.trim().length === 0)) {
       throw new Error("BlogBlock content cannot be empty");
     }
   }
