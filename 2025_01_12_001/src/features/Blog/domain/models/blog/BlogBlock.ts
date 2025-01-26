@@ -41,7 +41,7 @@ export class BlogBlock {
         }
         break;
       case "paragraph":
-        this.validateContent(this.content);
+        this.validateContent(this.type, this.content);
         break;
       default:
         break;
@@ -65,11 +65,10 @@ export class BlogBlock {
   }
 
   updateParagraph(newContent: string): void {
-    this.validateContent(newContent);
+    this.validateContent(this.type, newContent);
     this.content = newContent;
   }
-  updateHeading(newTitle: string, newLevel: number) {
-    this.validateContent(newTitle);
+  updateHeading(newLevel: number) {
     const type = "heading";
     this.validateMetadata(type, { level: newLevel });
     this.metadata = { ...this.metadata, level: newLevel };
