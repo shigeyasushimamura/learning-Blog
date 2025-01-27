@@ -19,7 +19,8 @@ jobs:
           node-version: "22"
           cache: "npm"
       - name: Install dependencies
-        run: cd 2025_01_12_001
+        run: |
+          cd 2025_01_12_001
           npm install
           npm ci
 
@@ -29,7 +30,8 @@ jobs:
     needs: init
     steps:
       - name: Build project
-        run: cd 2025_01_12_001
+        run: |
+          cd 2025_01_12_001
           npm run build
       - name: Upload build artifact
         uses: actions/upload-artifact@v3
