@@ -53,25 +53,25 @@ jobs:
           name: build-artifact
           path: 2025_01_12_001/dist # 📌 パスを明示的に指定
 
- # Test (Unit Tests)
- unit-test:
-  runs-on: ubuntu-latest
-  needs: build
-  steps:
-    - name: Checkout code  # 📌 コードを取得
-      uses: actions/checkout@v4
+  # Test (Unit Tests)
+  unit-test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code # 📌 コードを取得
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: "22"
-        cache: "npm"
-        cache-dependency-path: "2025_01_12_001/package-lock.json"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: "2025_01_12_001/package-lock.json"
 
-    - name: Install dependencies
-      working-directory: 2025_01_12_001
-      run: npm ci  # 📌 `install` ではなく `ci` を使用
+      - name: Install dependencies
+        working-directory: 2025_01_12_001
+        run: npm ci # 📌 `install` ではなく `ci` を使用
 
-    - name: Run unit tests
-      working-directory: 2025_01_12_001  # 📌 `npm run test:unit` を実行するディレクトリを指定
-      run: npm run test:unit
+      - name: Run unit tests
+        working-directory: 2025_01_12_001 # 📌 `npm run test:unit` を実行するディレクトリを指定
+        run: npm run test:unit
