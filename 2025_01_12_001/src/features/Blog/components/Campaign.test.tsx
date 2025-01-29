@@ -1,7 +1,6 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import Campaign from "./Campaign";
-import styles from "./Blog.module.css";
 import "@testing-library/jest-dom";
 
 vi.mock("./Blog.module.css", () => ({

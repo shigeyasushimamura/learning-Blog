@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createPost } from "../services/blogService";
+// import { createPost } from "../services/blogService";
 import { BlogBlock } from "../../domain/models/blog/BlogBlock";
 import { BlogPost } from "../../domain/models/blog/BlogPost";
 
@@ -45,10 +45,10 @@ export const useBlogItem = (initialPost: BlogPost) => {
     );
   };
 
-  const submitPost = async () => {
-    // applicationservice経由でrepositoryからAPI呼び出して、API内でDB更新
-    await createPost();
-  };
+  // const submitPost = async () => {
+  //   // applicationservice経由でrepositoryからAPI呼び出して、API内でDB更新
+  //   await createPost();
+  // };
 
   return { post, addBlock, deleteBlock, updateTitle };
 };

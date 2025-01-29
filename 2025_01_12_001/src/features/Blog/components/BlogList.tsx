@@ -5,7 +5,7 @@ import { BlogBlock } from "../domain/models/blog/BlogBlock";
 import { useState } from "react";
 
 const BlogList = () => {
-  const [posts, setPosts] = useState<BlogPost[]>([
+  const [posts] = useState<BlogPost[]>([
     new BlogPost("title1", [new BlogBlock("1", "heading", "", { level: 1 })]),
   ]);
 

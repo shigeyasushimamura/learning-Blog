@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { BlogPost } from "../domain/models/blog/BlogPost";
-import styles from "./Blog.module.css";
+// import styles from "./Blog.module.css";
 
 interface Props {
   post: BlogPost;
