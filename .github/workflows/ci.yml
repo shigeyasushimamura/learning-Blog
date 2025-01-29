@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: "22"
           cache: "npm"
+          cache-dependency-path: "2025_01_12_001/package-lock.json"
       - name: Install dependencies
         run: |
           cd 2025_01_12_001
