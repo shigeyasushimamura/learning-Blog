@@ -31,13 +31,12 @@ jobs:
     steps:
       - name: Build project
         run: |
-          cd 2025_01_12_001
           npm run build
       - name: Upload build artifact
         uses: actions/upload-artifact@v3
         with:
           name: build-artifact
-          path: ./2025_01_12_001/dist
+          path: ./dist
 
   # Test (Unit Tests)
   unit-test:
@@ -46,5 +45,4 @@ jobs:
     steps:
       - name: Run unit tests
         run: |
-          cd 2025_01_12_001
           npm run test:unit
