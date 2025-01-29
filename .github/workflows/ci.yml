@@ -74,4 +74,4 @@ jobs:
 
       - name: Run unit tests
         working-directory: 2025_01_12_001 # 📌 `npm run test:unit` を実行するディレクトリを指定
-        run: npm run test:unit
+        run: npm run test
