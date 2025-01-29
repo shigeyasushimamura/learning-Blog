@@ -7,6 +7,23 @@ on:
     branches: [main]
 
 jobs:
+  # Init(依存関係のインストール)
+  init:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: "2025_01_12_001/package-lock.json"
+      - name: Install dependencies
+        run: |
+          cd 2025_01_12_001
+          npm install
+
   # Build
   build:
     runs-on: ubuntu-latest
