@@ -22,7 +22,6 @@ jobs:
         run: |
           cd 2025_01_12_001
           npm install
-          npm ci
 
   # Build
   build:
