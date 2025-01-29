@@ -25,19 +25,34 @@ jobs:
           npm install
 
   # Build
+  # Build
   build:
     runs-on: ubuntu-latest
     needs: init
     steps:
+      - name: Checkout code # 📌 コードを取得
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: "2025_01_12_001/package-lock.json"
+
+      - name: Install dependencies
+        working-directory: 2025_01_12_001
+        run: npm ci # 📌 ここでは `ci` を使うのが推奨
+
       - name: Build project
-        run: |
-          ls
-          npm run build
+        working-directory: 2025_01_12_001 # 📌 `npm run build` の実行ディレクトリを指定
+        run: npm run build
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v3
         with:
           name: build-artifact
-          path: ./dist
+          path: 2025_01_12_001/dist # 📌 パスを明示的に指定
 
   # Test (Unit Tests)
   unit-test:
