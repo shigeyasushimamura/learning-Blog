@@ -26,7 +26,7 @@ exports[`Campaign > renders main campaign image with correct attributes 1`] = `
         aria-label="体験授業の申し込み"
         class="campaign__btn"
       >
-        無料で体験授業を受ける
+        無料で記事を購読する
       </button>
     </div>
     <div>
