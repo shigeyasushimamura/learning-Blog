@@ -29,7 +29,7 @@ const Campaign = () => {
             className={styles["campaign__btn"]}
             aria-label="体験授業の申し込み"
           >
-            無料で体験授業を受ける
+            無料で記事を購読する
           </button>
         </div>
 
